@@ -10,7 +10,11 @@ public class Solution {
 
     // Complete the aVeryBigSum function below.
     static long aVeryBigSum(long[] ar) {
-        
+        long bigSum = 0;
+        for (int i = 0; i < ar.length; i++) {
+            bigSum += ar[i];
+        }
+        return bigSum;
     }
 
     private static final Scanner scanner = new Scanner(System.in);
