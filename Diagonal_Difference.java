@@ -17,6 +17,29 @@ class Result {
 
     public static int diagonalDifference(List<List<Integer>> arr) {
     // Write your code here
+    int diagonalDiff = 0;
+    int leftDiagnol = 0;
+    int rightDiagnol = 0;
+    int j = 0;
+
+    // For loop to take the left to right diagonal
+    for (int i = 0; i < arr.size(); i++) {
+        leftDiagnol += arr.get(i).get(j);
+        j++;
+    }
+
+    // Reinitialize the j to be the (array size - 1)
+    j = arr.size()-1;
+
+    // For loop to take the right to left diagonal
+    for (int i = 0 ; i < arr.size() ; i++) {
+        rightDiagnol += arr.get(i).get(j);
+        j--;
+    }
+
+    diagonalDiff = leftDiagnol-rightDiagnol;
+
+    return diagonalDiff < 0 ? diagonalDiff*-1: diagonalDiff;
 
     }
 
