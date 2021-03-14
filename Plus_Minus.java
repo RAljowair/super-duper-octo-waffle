@@ -10,7 +10,27 @@ public class Solution {
 
     // Complete the plusMinus function below.
     static void plusMinus(int[] arr) {
+        float plusCounter = 0;
+        float minusCounter = 0;
+        float zeroCounter = 0;
 
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > 0) {
+                plusCounter++;
+            }else if (arr[i] < 0) {
+                minusCounter++;
+            } else {
+                zeroCounter++;
+            }
+        }
+        
+        float plusRatio = (plusCounter/arr.length);
+        float minusRatio = (minusCounter/arr.length);
+        float zeroRatio = (zeroCounter/arr.length);
+
+        System.out.printf("%.6f\n", plusRatio);
+        System.out.printf("%.6f\n", minusRatio);
+        System.out.printf("%.6f\n", zeroRatio);
 
     }
 
